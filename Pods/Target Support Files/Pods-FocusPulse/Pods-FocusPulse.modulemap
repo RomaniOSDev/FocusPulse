@@ -1,0 +1,6 @@
+framework module Pods_FocusPulse {
+  umbrella header "Pods-FocusPulse-umbrella.h"
+
+  export *
+  module * { export * }
+}
