@@ -90,13 +90,13 @@ struct SettingsView: View {
     }
 
     private func openPrivacyPolicy() {
-        if let url = URL(string: "https://example.com/privacy-policy") {
+        if let url = URL(string: "https://www.termsfeed.com/live/c4a314e4-8101-4814-b4ae-886fcd11dd44") {
             UIApplication.shared.open(url)
         }
     }
 
     private func openTermsOfUse() {
-        if let url = URL(string: "https://example.com/terms") {
+        if let url = URL(string: "https://www.termsfeed.com/live/49dbf3f8-2da4-4327-bb71-0404c472f380") {
             UIApplication.shared.open(url)
         }
     }

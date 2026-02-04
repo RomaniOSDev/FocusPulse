@@ -3,29 +3,95 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		74587E2F2F33DEED00356770 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E042F33DEED00356770 /* CheckLink.swift */; };
+		74587E302F33DEED00356770 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E052F33DEED00356770 /* InternetViewController.swift */; };
+		74587E312F33DEED00356770 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E062F33DEED00356770 /* LoaderViewController.swift */; };
+		74587E322F33DEED00356770 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E082F33DEED00356770 /* AchievementsView.swift */; };
+		74587E332F33DEED00356770 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E092F33DEED00356770 /* AchievementsViewModel.swift */; };
+		74587E342F33DEED00356770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0A2F33DEED00356770 /* AppDelegate.swift */; };
+		74587E352F33DEED00356770 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0C2F33DEED00356770 /* BarChartView.swift */; };
+		74587E362F33DEED00356770 /* CalendarIntegrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0D2F33DEED00356770 /* CalendarIntegrationService.swift */; };
+		74587E372F33DEED00356770 /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0E2F33DEED00356770 /* CircularTimerView.swift */; };
+		74587E382F33DEED00356770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0F2F33DEED00356770 /* ContentView.swift */; };
+		74587E392F33DEED00356770 /* DailyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E102F33DEED00356770 /* DailyProgressView.swift */; };
+		74587E3A2F33DEED00356770 /* DistractionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E112F33DEED00356770 /* DistractionDetector.swift */; };
+		74587E3B2F33DEED00356770 /* FocusSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E122F33DEED00356770 /* FocusSessionView.swift */; };
+		74587E3C2F33DEED00356770 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E132F33DEED00356770 /* HomeView.swift */; };
+		74587E3D2F33DEED00356770 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E172F33DEED00356770 /* LineChartView.swift */; };
+		74587E3E2F33DEED00356770 /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1A2F33DEED00356770 /* MetricCard.swift */; };
+		74587E3F2F33DEED00356770 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1B2F33DEED00356770 /* Models.swift */; };
+		74587E402F33DEED00356770 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1C2F33DEED00356770 /* OnboardingView.swift */; };
+		74587E412F33DEED00356770 /* PlannerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1D2F33DEED00356770 /* PlannerStorage.swift */; };
+		74587E422F33DEED00356770 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1E2F33DEED00356770 /* PlannerView.swift */; };
+		74587E432F33DEED00356770 /* PrepareForFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E1F2F33DEED00356770 /* PrepareForFocusView.swift */; };
+		74587E442F33DEED00356770 /* PresetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E202F33DEED00356770 /* PresetPickerView.swift */; };
+		74587E452F33DEED00356770 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E212F33DEED00356770 /* SceneDelegate.swift */; };
+		74587E462F33DEED00356770 /* SessionHistoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E222F33DEED00356770 /* SessionHistoryStorage.swift */; };
+		74587E472F33DEED00356770 /* SessionReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E232F33DEED00356770 /* SessionReviewView.swift */; };
+		74587E482F33DEED00356770 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E242F33DEED00356770 /* SessionViewModel.swift */; };
+		74587E492F33DEED00356770 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E252F33DEED00356770 /* SettingsView.swift */; };
+		74587E4A2F33DEED00356770 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E262F33DEED00356770 /* SettingsViewModel.swift */; };
+		74587E4B2F33DEED00356770 /* StatisticsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E272F33DEED00356770 /* StatisticsRootView.swift */; };
+		74587E4C2F33DEED00356770 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E282F33DEED00356770 /* StatisticsViewModel.swift */; };
+		74587E4D2F33DEED00356770 /* TaskSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E292F33DEED00356770 /* TaskSelectionView.swift */; };
+		74587E4E2F33DEED00356770 /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E2A2F33DEED00356770 /* TaskStorage.swift */; };
+		74587E4F2F33DEED00356770 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E2B2F33DEED00356770 /* Theme.swift */; };
+		74587E502F33DEED00356770 /* UserPreferencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E2C2F33DEED00356770 /* UserPreferencesStorage.swift */; };
+		74587E512F33DEED00356770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E2D2F33DEED00356770 /* ViewController.swift */; };
+		74587E522F33DEED00356770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74587E0B2F33DEED00356770 /* Assets.xcassets */; };
+		74587E542F33DEED00356770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74587E162F33DEED00356770 /* LaunchScreen.storyboard */; };
+		74587E552F33DEED00356770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74587E192F33DEED00356770 /* Main.storyboard */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74587C772F3348D700356770 /* FocusPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74587E042F33DEED00356770 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		74587E052F33DEED00356770 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		74587E062F33DEED00356770 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		74587E082F33DEED00356770 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		74587E092F33DEED00356770 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
+		74587E0A2F33DEED00356770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74587E0B2F33DEED00356770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74587E0C2F33DEED00356770 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		74587E0D2F33DEED00356770 /* CalendarIntegrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarIntegrationService.swift; sourceTree = "<group>"; };
+		74587E0E2F33DEED00356770 /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
+		74587E0F2F33DEED00356770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74587E102F33DEED00356770 /* DailyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressView.swift; sourceTree = "<group>"; };
+		74587E112F33DEED00356770 /* DistractionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistractionDetector.swift; sourceTree = "<group>"; };
+		74587E122F33DEED00356770 /* FocusSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSessionView.swift; sourceTree = "<group>"; };
+		74587E132F33DEED00356770 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		74587E142F33DEED00356770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74587E152F33DEED00356770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74587E172F33DEED00356770 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		74587E182F33DEED00356770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74587E1A2F33DEED00356770 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
+		74587E1B2F33DEED00356770 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		74587E1C2F33DEED00356770 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		74587E1D2F33DEED00356770 /* PlannerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerStorage.swift; sourceTree = "<group>"; };
+		74587E1E2F33DEED00356770 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
+		74587E1F2F33DEED00356770 /* PrepareForFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareForFocusView.swift; sourceTree = "<group>"; };
+		74587E202F33DEED00356770 /* PresetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetPickerView.swift; sourceTree = "<group>"; };
+		74587E212F33DEED00356770 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		74587E222F33DEED00356770 /* SessionHistoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryStorage.swift; sourceTree = "<group>"; };
+		74587E232F33DEED00356770 /* SessionReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionReviewView.swift; sourceTree = "<group>"; };
+		74587E242F33DEED00356770 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		74587E252F33DEED00356770 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74587E262F33DEED00356770 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		74587E272F33DEED00356770 /* StatisticsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRootView.swift; sourceTree = "<group>"; };
+		74587E282F33DEED00356770 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		74587E292F33DEED00356770 /* TaskSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSelectionView.swift; sourceTree = "<group>"; };
+		74587E2A2F33DEED00356770 /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
+		74587E2B2F33DEED00356770 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		74587E2C2F33DEED00356770 /* UserPreferencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesStorage.swift; sourceTree = "<group>"; };
+		74587E2D2F33DEED00356770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3F99C42CCD3995CC016A667 /* Pods-FocusPulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusPulse.release.xcconfig"; path = "Target Support Files/Pods-FocusPulse/Pods-FocusPulse.release.xcconfig"; sourceTree = "<group>"; };
 		B5E7623DAEDC229F1BA3A0A3 /* Pods-FocusPulse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusPulse.debug.xcconfig"; path = "Target Support Files/Pods-FocusPulse/Pods-FocusPulse.debug.xcconfig"; sourceTree = "<group>"; };
 		C785C22922287DE89B611CEF /* Pods_FocusPulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusPulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		74587CB52F3349CF00356770 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 74587C762F3348D700356770 /* FocusPulse */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		74587CAC2F3349CF00356770 /* FocusPulse */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (74587CB52F3349CF00356770 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = FocusPulse; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		74587C742F3348D700356770 /* Frameworks */ = {
@@ -41,7 +107,7 @@
 		74587C6E2F3348D700356770 = {
 			isa = PBXGroup;
 			children = (
-				74587CAC2F3349CF00356770 /* FocusPulse */,
+				74587E2E2F33DEED00356770 /* FocusPulse */,
 				74587C782F3348D700356770 /* Products */,
 				87C6DC650B00E8996AD5A462 /* Pods */,
 				81C6B6E7DF39020CFA40B318 /* Frameworks */,
@@ -54,6 +120,60 @@
 				74587C772F3348D700356770 /* FocusPulse.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		74587E072F33DEED00356770 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				74587E042F33DEED00356770 /* CheckLink.swift */,
+				74587E052F33DEED00356770 /* InternetViewController.swift */,
+				74587E062F33DEED00356770 /* LoaderViewController.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		74587E2E2F33DEED00356770 /* FocusPulse */ = {
+			isa = PBXGroup;
+			children = (
+				74587E072F33DEED00356770 /* LoadingView */,
+				74587E082F33DEED00356770 /* AchievementsView.swift */,
+				74587E092F33DEED00356770 /* AchievementsViewModel.swift */,
+				74587E0A2F33DEED00356770 /* AppDelegate.swift */,
+				74587E0B2F33DEED00356770 /* Assets.xcassets */,
+				74587E0C2F33DEED00356770 /* BarChartView.swift */,
+				74587E0D2F33DEED00356770 /* CalendarIntegrationService.swift */,
+				74587E0E2F33DEED00356770 /* CircularTimerView.swift */,
+				74587E0F2F33DEED00356770 /* ContentView.swift */,
+				74587E102F33DEED00356770 /* DailyProgressView.swift */,
+				74587E112F33DEED00356770 /* DistractionDetector.swift */,
+				74587E122F33DEED00356770 /* FocusSessionView.swift */,
+				74587E132F33DEED00356770 /* HomeView.swift */,
+				74587E142F33DEED00356770 /* Info.plist */,
+				74587E162F33DEED00356770 /* LaunchScreen.storyboard */,
+				74587E172F33DEED00356770 /* LineChartView.swift */,
+				74587E192F33DEED00356770 /* Main.storyboard */,
+				74587E1A2F33DEED00356770 /* MetricCard.swift */,
+				74587E1B2F33DEED00356770 /* Models.swift */,
+				74587E1C2F33DEED00356770 /* OnboardingView.swift */,
+				74587E1D2F33DEED00356770 /* PlannerStorage.swift */,
+				74587E1E2F33DEED00356770 /* PlannerView.swift */,
+				74587E1F2F33DEED00356770 /* PrepareForFocusView.swift */,
+				74587E202F33DEED00356770 /* PresetPickerView.swift */,
+				74587E212F33DEED00356770 /* SceneDelegate.swift */,
+				74587E222F33DEED00356770 /* SessionHistoryStorage.swift */,
+				74587E232F33DEED00356770 /* SessionReviewView.swift */,
+				74587E242F33DEED00356770 /* SessionViewModel.swift */,
+				74587E252F33DEED00356770 /* SettingsView.swift */,
+				74587E262F33DEED00356770 /* SettingsViewModel.swift */,
+				74587E272F33DEED00356770 /* StatisticsRootView.swift */,
+				74587E282F33DEED00356770 /* StatisticsViewModel.swift */,
+				74587E292F33DEED00356770 /* TaskSelectionView.swift */,
+				74587E2A2F33DEED00356770 /* TaskStorage.swift */,
+				74587E2B2F33DEED00356770 /* Theme.swift */,
+				74587E2C2F33DEED00356770 /* UserPreferencesStorage.swift */,
+				74587E2D2F33DEED00356770 /* ViewController.swift */,
+			);
+			path = FocusPulse;
 			sourceTree = "<group>";
 		};
 		81C6B6E7DF39020CFA40B318 /* Frameworks */ = {
@@ -88,9 +208,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				74587CAC2F3349CF00356770 /* FocusPulse */,
 			);
 			name = FocusPulse;
 			productName = FocusPulse;
@@ -135,6 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74587E522F33DEED00356770 /* Assets.xcassets in Resources */,
+				74587E542F33DEED00356770 /* LaunchScreen.storyboard in Resources */,
+				74587E552F33DEED00356770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +290,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74587E2F2F33DEED00356770 /* CheckLink.swift in Sources */,
+				74587E302F33DEED00356770 /* InternetViewController.swift in Sources */,
+				74587E312F33DEED00356770 /* LoaderViewController.swift in Sources */,
+				74587E322F33DEED00356770 /* AchievementsView.swift in Sources */,
+				74587E332F33DEED00356770 /* AchievementsViewModel.swift in Sources */,
+				74587E342F33DEED00356770 /* AppDelegate.swift in Sources */,
+				74587E352F33DEED00356770 /* BarChartView.swift in Sources */,
+				74587E362F33DEED00356770 /* CalendarIntegrationService.swift in Sources */,
+				74587E372F33DEED00356770 /* CircularTimerView.swift in Sources */,
+				74587E382F33DEED00356770 /* ContentView.swift in Sources */,
+				74587E392F33DEED00356770 /* DailyProgressView.swift in Sources */,
+				74587E3A2F33DEED00356770 /* DistractionDetector.swift in Sources */,
+				74587E3B2F33DEED00356770 /* FocusSessionView.swift in Sources */,
+				74587E3C2F33DEED00356770 /* HomeView.swift in Sources */,
+				74587E3D2F33DEED00356770 /* LineChartView.swift in Sources */,
+				74587E3E2F33DEED00356770 /* MetricCard.swift in Sources */,
+				74587E3F2F33DEED00356770 /* Models.swift in Sources */,
+				74587E402F33DEED00356770 /* OnboardingView.swift in Sources */,
+				74587E412F33DEED00356770 /* PlannerStorage.swift in Sources */,
+				74587E422F33DEED00356770 /* PlannerView.swift in Sources */,
+				74587E432F33DEED00356770 /* PrepareForFocusView.swift in Sources */,
+				74587E442F33DEED00356770 /* PresetPickerView.swift in Sources */,
+				74587E452F33DEED00356770 /* SceneDelegate.swift in Sources */,
+				74587E462F33DEED00356770 /* SessionHistoryStorage.swift in Sources */,
+				74587E472F33DEED00356770 /* SessionReviewView.swift in Sources */,
+				74587E482F33DEED00356770 /* SessionViewModel.swift in Sources */,
+				74587E492F33DEED00356770 /* SettingsView.swift in Sources */,
+				74587E4A2F33DEED00356770 /* SettingsViewModel.swift in Sources */,
+				74587E4B2F33DEED00356770 /* StatisticsRootView.swift in Sources */,
+				74587E4C2F33DEED00356770 /* StatisticsViewModel.swift in Sources */,
+				74587E4D2F33DEED00356770 /* TaskSelectionView.swift in Sources */,
+				74587E4E2F33DEED00356770 /* TaskStorage.swift in Sources */,
+				74587E4F2F33DEED00356770 /* Theme.swift in Sources */,
+				74587E502F33DEED00356770 /* UserPreferencesStorage.swift in Sources */,
+				74587E512F33DEED00356770 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74587E162F33DEED00356770 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74587E152F33DEED00356770 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		74587E192F33DEED00356770 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74587E182F33DEED00356770 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		74587C8B2F3348D800356770 /* Debug */ = {
@@ -186,6 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPulse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "StaFlux: Focus Pulse";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -197,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FocusPulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.att.st4fl8xf0cpls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -223,6 +398,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPulse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "StaFlux: Focus Pulse";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -234,7 +410,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FocusPulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.att.st4fl8xf0cpls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
