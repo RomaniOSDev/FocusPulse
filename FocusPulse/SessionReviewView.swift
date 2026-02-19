@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct SessionReviewView: View {
-    let onDone: (Int) -> Void
+    let onDone: (Int, String) -> Void
     @Environment(\.dismiss) private var dismiss
 
     @State private var rating: Int = 4
+    @State private var noteText: String = ""
 
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text("How focused were you?")
                     .font(.title2.weight(.semibold))
                     .foregroundColor(.white)
@@ -37,10 +38,23 @@ struct SessionReviewView: View {
                     }
                 }
 
+                Text("What did you focus on?")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.8))
+
+                TextEditor(text: $noteText)
+                    .frame(height: 100)
+                    .padding(8)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.white.opacity(0.06))
+                    )
+                    .foregroundColor(.white)
+
                 Spacer()
 
                 Button {
-                    onDone(rating)
+                    onDone(rating, noteText)
                     dismiss()
                 } label: {
                     Text("Save review")

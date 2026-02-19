@@ -26,6 +26,15 @@ final class StatisticsViewModel: ObservableObject {
     @Published var weekStats: [DailyStats]
     @Published var insights: [Insight] = []
 
+    // Streaks & season
+    @Published var currentStreakDays: Int = 0
+    @Published var bestStreakDays: Int = 0
+    @Published var topTagsToday: [(FocusTag, TimeInterval)] = []
+    @Published var recentNotes: [FocusSession] = []
+    @Published var monthTotalFocusTime: TimeInterval = 0
+    @Published var monthSessionsCount: Int = 0
+    @Published var monthBestDay: Date?
+
     private var allSessions: [FocusSession] = []
 
     init() {
@@ -82,6 +91,9 @@ final class StatisticsViewModel: ObservableObject {
                 }
             }
             weekStats = week.sorted { $0.date < $1.date }
+            computeStreaksAndSeason()
+            computeTagContext(todaySessions: todaySessions)
+            computeRecentNotes()
             generateInsights()
         }
     }
@@ -153,6 +165,85 @@ final class StatisticsViewModel: ObservableObject {
         guard !ratings.isEmpty else { return nil }
         let sum = ratings.reduce(0, +)
         return Double(sum) / Double(ratings.count)
+    }
+
+    private func computeStreaksAndSeason() {
+        let focusSessions = allSessions.filter { $0.type == .focus && $0.wasCompleted }
+        guard !focusSessions.isEmpty else {
+            currentStreakDays = 0
+            bestStreakDays = 0
+            return
+        }
+
+        let calendar = Calendar.current
+        let uniqueDays = Set(focusSessions.map { calendar.startOfDay(for: $0.startTime) })
+        let sorted = uniqueDays.sorted()
+
+        var best = 1
+        var current = 1
+        for i in 1..<sorted.count {
+            if let prev = calendar.date(byAdding: .day, value: 1, to: sorted[i - 1]),
+               calendar.isDate(prev, inSameDayAs: sorted[i]) {
+                current += 1
+                best = max(best, current)
+            } else {
+                current = 1
+            }
+        }
+
+        bestStreakDays = best
+
+        // current streak: считаем от сегодняшнего дня назад
+        let today = calendar.startOfDay(for: Date())
+        var streak = 0
+        var dateCursor = today
+        while uniqueDays.contains(dateCursor) {
+            streak += 1
+            if let prev = calendar.date(byAdding: .day, value: -1, to: dateCursor) {
+                dateCursor = prev
+            } else {
+                break
+            }
+        }
+        currentStreakDays = streak
+
+        // Season (current month)
+        let components = calendar.dateComponents([.year, .month], from: today)
+        guard let startOfMonth = calendar.date(from: components),
+              let startOfNextMonth = calendar.date(byAdding: .month, value: 1, to: startOfMonth) else {
+            return
+        }
+
+        let monthSessions = focusSessions.filter { $0.startTime >= startOfMonth && $0.startTime < startOfNextMonth }
+        monthTotalFocusTime = monthSessions.reduce(0) { $0 + ($1.actualDuration ?? $1.plannedDuration) }
+        monthSessionsCount = monthSessions.count
+
+        // best day in month
+        var focusByDay: [Date: TimeInterval] = [:]
+        for s in monthSessions {
+            let day = calendar.startOfDay(for: s.startTime)
+            focusByDay[day, default: 0] += s.actualDuration ?? s.plannedDuration
+        }
+        monthBestDay = focusByDay.max(by: { $0.value < $1.value })?.key
+    }
+
+    private func computeTagContext(todaySessions: [FocusSession]) {
+        let focusToday = todaySessions.filter { $0.type == .focus }
+        var timeByTag: [FocusTag: TimeInterval] = [:]
+        for session in focusToday {
+            let duration = session.actualDuration ?? session.plannedDuration
+            for tag in session.tags {
+                timeByTag[tag, default: 0] += duration
+            }
+        }
+        topTagsToday = timeByTag.sorted { $0.value > $1.value }
+    }
+
+    private func computeRecentNotes() {
+        let withNotes = allSessions
+            .filter { ($0.notes?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false) }
+            .sorted { $0.startTime > $1.startTime }
+        recentNotes = Array(withNotes.prefix(3))
     }
 }
 

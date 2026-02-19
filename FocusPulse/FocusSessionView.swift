@@ -42,7 +42,7 @@ struct FocusSessionView: View {
                 Spacer()
 
                 // Current task & preset
-                VStack(spacing: 8) {
+                VStack(spacing: 12) {
                     HStack {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("Current task")
@@ -84,6 +84,39 @@ struct FocusSessionView: View {
                             .font(.caption)
                             .foregroundColor(AppTheme.breakAccent)
                     }
+
+                    // Tags
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            ForEach(FocusTag.allCases, id: \.id) { tag in
+                                let isSelected = viewModel.selectedTags.contains(tag)
+                                Text(tag.title)
+                                    .font(.caption)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 6)
+                                    .background(
+                                        Capsule()
+                                            .fill(
+                                                isSelected
+                                                ? LinearGradient(
+                                                    colors: [AppTheme.focusAccent, AppTheme.focusAccent.opacity(0.7)],
+                                                    startPoint: .leading,
+                                                    endPoint: .trailing
+                                                  )
+                                                : LinearGradient(
+                                                    colors: [Color.white.opacity(0.12), Color.white.opacity(0.04)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                  )
+                                            )
+                                    )
+                                    .foregroundColor(isSelected ? AppTheme.background : .white.opacity(0.8))
+                                    .onTapGesture {
+                                        viewModel.toggleTag(tag)
+                                    }
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 40)
 
@@ -111,8 +144,8 @@ struct FocusSessionView: View {
             }
         }
         .sheet(isPresented: $viewModel.isReviewPresented) {
-            SessionReviewView { rating in
-                viewModel.applyReview(rating: rating)
+            SessionReviewView { rating, note in
+                viewModel.applyReview(rating: rating, note: note)
             }
         }
     }

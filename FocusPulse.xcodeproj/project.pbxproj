@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74587E2F2F33DEED00356770 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E042F33DEED00356770 /* CheckLink.swift */; };
-		74587E302F33DEED00356770 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E052F33DEED00356770 /* InternetViewController.swift */; };
-		74587E312F33DEED00356770 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E062F33DEED00356770 /* LoaderViewController.swift */; };
 		74587E322F33DEED00356770 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E082F33DEED00356770 /* AchievementsView.swift */; };
 		74587E332F33DEED00356770 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E092F33DEED00356770 /* AchievementsViewModel.swift */; };
 		74587E342F33DEED00356770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74587E0A2F33DEED00356770 /* AppDelegate.swift */; };
@@ -49,9 +46,6 @@
 
 /* Begin PBXFileReference section */
 		74587C772F3348D700356770 /* FocusPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		74587E042F33DEED00356770 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
-		74587E052F33DEED00356770 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
-		74587E062F33DEED00356770 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		74587E082F33DEED00356770 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		74587E092F33DEED00356770 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
 		74587E0A2F33DEED00356770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,20 +116,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74587E072F33DEED00356770 /* LoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				74587E042F33DEED00356770 /* CheckLink.swift */,
-				74587E052F33DEED00356770 /* InternetViewController.swift */,
-				74587E062F33DEED00356770 /* LoaderViewController.swift */,
-			);
-			path = LoadingView;
-			sourceTree = "<group>";
-		};
 		74587E2E2F33DEED00356770 /* FocusPulse */ = {
 			isa = PBXGroup;
 			children = (
-				74587E072F33DEED00356770 /* LoadingView */,
 				74587E082F33DEED00356770 /* AchievementsView.swift */,
 				74587E092F33DEED00356770 /* AchievementsViewModel.swift */,
 				74587E0A2F33DEED00356770 /* AppDelegate.swift */,
@@ -290,9 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74587E2F2F33DEED00356770 /* CheckLink.swift in Sources */,
-				74587E302F33DEED00356770 /* InternetViewController.swift in Sources */,
-				74587E312F33DEED00356770 /* LoaderViewController.swift in Sources */,
 				74587E322F33DEED00356770 /* AchievementsView.swift in Sources */,
 				74587E332F33DEED00356770 /* AchievementsViewModel.swift in Sources */,
 				74587E342F33DEED00356770 /* AppDelegate.swift in Sources */,
@@ -357,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "StaFlux: Focus Pulse";
@@ -395,7 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "StaFlux: Focus Pulse";

@@ -51,10 +51,63 @@ struct FocusSession: Identifiable, Codable {
     // Task & preset linking
     var taskId: UUID?
     var preset: PresetProfile = .lightFocus
+    var tags: [FocusTag] = []
     
     // Results and distractions
     var focusRating: Int?
     var distractionEvents: [DistractionEvent] = []
+
+    init(
+        id: UUID,
+        type: SessionType,
+        startTime: Date,
+        plannedDuration: TimeInterval,
+        actualDuration: TimeInterval? = nil,
+        wasCompleted: Bool,
+        distractionsCount: Int,
+        notes: String? = nil,
+        taskId: UUID? = nil,
+        preset: PresetProfile = .lightFocus,
+        tags: [FocusTag] = [],
+        focusRating: Int? = nil,
+        distractionEvents: [DistractionEvent] = []
+    ) {
+        self.id = id
+        self.type = type
+        self.startTime = startTime
+        self.plannedDuration = plannedDuration
+        self.actualDuration = actualDuration
+        self.wasCompleted = wasCompleted
+        self.distractionsCount = distractionsCount
+        self.notes = notes
+        self.taskId = taskId
+        self.preset = preset
+        self.tags = tags
+        self.focusRating = focusRating
+        self.distractionEvents = distractionEvents
+    }
+}
+
+enum FocusTag: String, Codable, CaseIterable, Identifiable {
+    case coding
+    case reading
+    case design
+    case planning
+    case deepWork
+    case admin
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .coding: return "Coding"
+        case .reading: return "Reading"
+        case .design: return "Design"
+        case .planning: return "Planning"
+        case .deepWork: return "Deep work"
+        case .admin: return "Admin"
+        }
+    }
 }
 
 struct DistractionEvent: Identifiable, Codable {

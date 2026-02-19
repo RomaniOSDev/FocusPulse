@@ -22,6 +22,9 @@ final class SessionViewModel: ObservableObject {
     @Published var currentTask: FocusTask?
     @Published var selectedPreset: PresetProfile = .lightFocus
 
+    // Tags
+    @Published var selectedTags: Set<FocusTag> = []
+
     // Review sheet
     @Published var isReviewPresented: Bool = false
     @Published var reviewSession: FocusSession?
@@ -77,6 +80,7 @@ final class SessionViewModel: ObservableObject {
             notes: nil,
             taskId: currentTask?.id,
             preset: selectedPreset,
+            tags: Array(selectedTags),
             focusRating: nil,
             distractionEvents: []
         )
@@ -206,11 +210,20 @@ final class SessionViewModel: ObservableObject {
         selectedPreset = preset
     }
 
-    func applyReview(rating: Int) {
+    func applyReview(rating: Int, note: String?) {
         guard rating >= 1, rating <= 5 else { return }
         guard var session = currentSession else { return }
         session.focusRating = rating
+        session.notes = (note?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false) ? note : session.notes
         currentSession = session
+
+        // обновляем последнюю сессию в истории
+        var all = SessionHistoryStorage.loadAll()
+        if let index = all.lastIndex(where: { $0.id == session.id }) {
+            all[index] = session
+            SessionHistoryStorage.save(all)
+        }
+
         isReviewPresented = false
     }
 
@@ -275,6 +288,15 @@ final class SessionViewModel: ObservableObject {
 
     private func saveTasks() {
         TaskStorage.save(tasks)
+    }
+
+    // Toggle tag from UI
+    func toggleTag(_ tag: FocusTag) {
+        if selectedTags.contains(tag) {
+            selectedTags.remove(tag)
+        } else {
+            selectedTags.insert(tag)
+        }
     }
 
     private func registerBackgroundTask() {
